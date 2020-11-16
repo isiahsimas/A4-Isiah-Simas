@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./index_files/styles.css">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--For responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="./index_files/firebase-app.js.download"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCs_Xxxx7u50FWa_st9ZsZw-c2Qy-Do5dY",
+    authDomain: "saving-emails-and-names.firebaseapp.com",
+    databaseURL: "https://saving-emails-and-names.firebaseio.com",
+    projectId: "saving-emails-and-names",
+    storageBucket: "saving-emails-and-names.appspot.com",
+    messagingSenderId: "113399629071",
+    appId: "1:113399629071:web:51205b5a1a1f831f3baa7a"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+    function writeData() {
+        // create an object to store in the database with key and value
+        firebase.database().ref("User").set({
+            email: document.getElementById("emailField").value,
+            name: document.getElementById("nameField").value
+        });
+    }
+</script>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">A4 Isiah Simas</span>
+      </nav>
+    <div class="container"><br>
+    <h1>How to Create a Simple Portfolio Website</h1>
+    <video controls="" autoplay="" muted="">
+        <source src="recording.mp4" type="video/mp4">
+        <track kind="subtitles" src="subtitles_en.vtt" srclang="en" default="">
+    </video><br><br>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Clone this <a href="https://github.com/rhildred/browserBlog" target="_blank">repo</a> as a starting point</li>
+        <li>Decide on the projects, skills and other content you wish to include</li>
+        <li>Within index.js - change values such as the id, names and images to suit your style</li>
+        <li>Create md pages and add content for the item pages</li>
+        <li>Change index.html to only have current, items and pages</li>
+        <li>Change index.js to append images and page divs</li>
+        <li>Change css to allow images to display and style, borders, margins, fonts and tables</li>
+        <li>Have fun!</li>
+    </ol>
+    Hint: Try using the <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> framework for a quick and simple UI.<br>
+    <br>
+    <h2>Result</h2>
+    <p>
+    </p><h5>Desktop Screen</h5>
+    This shows what to site looks like on a desktop monitor.
+    <img src="./index_files/a4screenwide.png" alt="Desktop screen of portfolio" class="img-fluid"><br><br>
+    <h5>Mobile Screen</h5>
+    The meta viewport tag allows our site to scale to mobile screen formats.<br>
+    <img src="./index_files/a4screenmobile.png" alt="Mobile screen of portfolio" class="img-fluid"><br><br>
+    <h4>Verdict?</h4>That's for you to decide.
+    <p></p>
+        <form action="http://127.0.0.1:5500/thanks.html">
+            <div class="form-group">
+                <h3>Subscribe</h3>
+                <label for="emailField">Email address</label>
+                <input type="email" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="nameField">Name</label>
+                <input type="text" class="form-control" id="nameField" placeholder="Enter name">
+              </div>
+              <button onclick="writeData()" type="submit" class="btn btn-primary">Submit</button>
+            </form></div>
+        <br><br>
+</body>        
+<footer>
+    <div class="footer-copyright text-center py-3">© 2020 Isiah Simas
+    </div>
+</footer>
+</html>
